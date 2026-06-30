@@ -1,10 +1,40 @@
-# alpha-f5-member-position-concentration
+# skill-alpha-f5-member-position-concentration
+
+当前远端仓库名为 `alpha-f5-member-position-concentration`。按 QuantSkills 社区公开收录规则，建议维护者将仓库重命名为 `skill-alpha-f5-member-position-concentration` 后再申请公开、收录、恢复 public 或进入 registry / quantskills / 组织首页索引。
 
 商品期货会员持仓集中度 Alpha（Factor ID: F5）。计算前5大净多/净空席位的持仓保证金集中度，生成横截面 buy/sell/hold 信号。
+
+本仓库仅提供研究与验证工具，不构成投资建议，不承诺收益，也不代表 QuantSkills、Panda data、Codex、Claude Code、Cursor、Hermes 或 OpenClaw 的官方背书。
+
+## 社区合规状态
+
+| 项目 | 状态 |
+|------|------|
+| 仓库类型 | Skill |
+| 建议仓库名 | `skill-alpha-f5-member-position-concentration` |
+| 根入口 | `SKILL.md` |
+| 中文说明 | `README.md` |
+| 英文说明 | `README.en.md` |
+| 许可证 | `GPL-3.0-only`，见 `LICENSE` 与 `skill.json` |
+| Codex 入口 | `AGENTS.md` |
+| Claude Code 入口 | `CLAUDE.md` |
+| Cursor 入口 | `.cursor/rules/skill-alpha-f5-member-position-concentration.mdc` |
+| Hermes 入口 | `HERMES.md` |
+| OpenClaw 入口 | `OPENCLAW.md` |
 
 ## 目录结构
 
 ```
+SKILL.md                                          根 skill 入口
+skill.json                                        QuantSkills 元数据
+AGENTS.md                                         Codex 入口
+CLAUDE.md                                         Claude Code 入口
+HERMES.md                                         Hermes 入口
+OPENCLAW.md                                       OpenClaw 入口
+.cursor/rules/skill-alpha-f5-member-position-concentration.mdc
+README.en.md                                      英文说明
+LICENSE                                           GPL-3.0-only 许可声明
+
 alpha-f5-member-position-concentration/        开发产物（计算、验证、回测）
   scripts/
     factor.py       因子计算，输出 Parquet 结果
@@ -87,6 +117,8 @@ python scripts/backtest.py
 
 交易 agent 使用 `alpha-f5-member-position-concentration-production` skill 读取 `database.parquet`，不在调用时重新计算因子。
 
+生产查询结果只能作为研究数据读取，不应表述为交易建议、收益预测或确定性信号。
+
 ## 依赖
 
 - Python 3.10+
@@ -94,3 +126,7 @@ python scripts/backtest.py
 - pandas
 - scipy
 - pyarrow 或 fastparquet
+
+## 许可证
+
+本仓库使用 `GPL-3.0-only`。见 `LICENSE`。

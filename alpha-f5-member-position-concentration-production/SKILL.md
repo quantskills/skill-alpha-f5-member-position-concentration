@@ -1,6 +1,7 @@
 ---
 name: alpha-f5-member-position-concentration-production
-description: 当需要读取会员持仓集中度 Alpha 的生产计算结果时，使用此 skill。该 skill 只读取已生成的 Parquet 结果，不在调用时重新计算因子。
+description: Use when reading the local F5 commodity futures member-position concentration factor parquet output without recomputing the factor.
+license: GPL-3.0-only
 tags: [quant, alpha, production, future]
 ---
 
@@ -56,3 +57,4 @@ tags: [quant, alpha, production, future]
 - 不允许在 agent 调用时重新拉取原始行情。
 - 不允许在 agent 调用时重新计算因子。
 - 不允许手工修改 Parquet 结果。
+- 不允许将结果表述为投资建议、收益承诺或官方背书。

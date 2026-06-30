@@ -1,6 +1,7 @@
 ---
 name: alpha-f5-member-position-concentration
-description: 当需要开发、计算、验证会员持仓集中度因子时，使用此 skill。支持期货席位净持仓拉取、多空集中度因子计算、无未来函数检测、IC/ICIR 回测评估和 buy/sell/hold 信号输出。
+description: Use when developing, computing or validating the F5 commodity futures member-position concentration factor in a local Panda data environment.
+license: GPL-3.0-only
 tags: [quant, alpha, development, future]
 ---
 
@@ -98,6 +99,10 @@ python scripts/backtest.py
 - `validate.py` 输出验证通过信息。
 - `backtest.py` 输出研究口径和可交易口径两组指标，包含多周期 IC 衰减（1D-20D）、Bootstrap IC 95% CI、成本四档分析和可交易 ARR/IR。
 - 数据来源为 Panda data SDK，不读取本地文件作为正式输入。
+
+## 边界
+
+本 skill 仅用于研究和验证，不构成投资建议，不承诺收益，不代表任何平台或组织的官方背书。不得记录、提交或传播 Panda data 凭据。
 
 ## 验收要求
 
